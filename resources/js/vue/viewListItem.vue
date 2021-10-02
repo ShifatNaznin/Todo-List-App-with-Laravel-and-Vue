@@ -2,7 +2,7 @@
     <div>
         
         <div v-for="(item,index) in items" :key="index">
-           <list-item
+           <complete-list-item
            :item="item"
            class="item"
            v-on:itemchanged="$emit('reloadList')"
@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import listItem from "./listItem.vue"
+import completeListItem from "./completeListItem.vue"
 export default {
     props: ['items'], 
     components: {
-        listItem
+        completeListItem
     }
 }
 </script>
